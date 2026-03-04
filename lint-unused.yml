@@ -1,0 +1,9 @@
+# lint-unused.yml - Configuration
+paths:
+  - src/
+
+exclude_paths: []
+
+allow_names: []
+
+allow_patterns: []
