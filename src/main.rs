@@ -14,12 +14,12 @@ mod cli;
 mod config;
 
 use cli::{Cli, OutputFormat};
-use config::Config;
+use config::{Config, xdg_data_dir};
 use lint_unused::filter;
 use lint_unused::reporter;
 
 fn setup_logging() -> Result<()> {
-    let log_dir = dirs::data_local_dir()
+    let log_dir = xdg_data_dir()
         .unwrap_or_else(|| PathBuf::from("."))
         .join("lint-unused")
         .join("logs");
