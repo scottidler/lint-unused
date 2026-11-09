@@ -5,7 +5,7 @@ use std::path::PathBuf;
 #[command(
     name = "lint-unused",
     about = "Detect underscore-prefixed variable bindings that suppress unused warnings",
-    version = env!("GIT_DESCRIBE"),
+    version = env!("BUILD_VERSION"),
     after_help = "Logs are written to: ~/.local/share/lint-unused/logs/lint-unused.log"
 )]
 pub struct Cli {
